@@ -49,6 +49,7 @@ public class BoardController {
         if (boardDTO.getFileAttached() == 1) {
             BoardFileDTO boardFileDTO = boardService.findFile(id);
             model.addAttribute("boardFile", boardFileDTO);
+            System.out.println("boardFileDTO = " + boardFileDTO);
         }
         return "detail";
     }
